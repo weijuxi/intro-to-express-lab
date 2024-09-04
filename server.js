@@ -6,15 +6,15 @@ const app = express()
 
 // Telling the server where to listen for http requests
 
+app.get('/', (req, res) => {
+    res.send("Hello, world!");
+});
 
 
 app.get('/greetings/:username', (req, res) => {
     const username = req.params.username;
     res.send(`Hello there, ${username}!`);
 });
-
-
-
 
 
 app.get('/roll/:number', (req, res) => {
@@ -80,3 +80,8 @@ app.get('/shoes', (req, res) => {
 
     res.json(filteredShoes);
 });
+
+
+app.listen(3000, () => {
+    console.log("Server is running...");
+})

@@ -49,6 +49,7 @@ app.get('/collectibles/:index', (req, res) => {
 
 
 
+
 const shoes = [
     { name: "Birkenstocks", price: 50, type: "sandal" },
     { name: "Air Jordans", price: 500, type: "sneaker" },
